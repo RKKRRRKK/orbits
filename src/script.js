@@ -159,11 +159,6 @@ const moonsphere = new THREE.SphereGeometry(0.552, 16,16);
 
 //JSON stuff:
 
-// creating pivot object
-
-const pivot = new THREE.Object3D();
-pivot.position.set(0, 0, 0);
-scene.add(pivot);
 
 // creating loop 
 fetch('data_normal.json')
