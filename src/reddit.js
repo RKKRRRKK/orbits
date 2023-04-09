@@ -1,3 +1,5 @@
+//I am not sure why I have this file here but refer to "script.js"
+
 fetch('data_normal.json')
   .then(response => response.json())
   .then(data => {
@@ -26,5 +28,6 @@ fetch('data_normal.json')
       
     }
   })
+
 
 
