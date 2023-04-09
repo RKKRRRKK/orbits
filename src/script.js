@@ -73,9 +73,6 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.25;
 
-/**
- * Animate
- */
 
 
 // Objects + Materials
@@ -136,9 +133,8 @@ new RGBELoader().setPath('textures/').load('hdr5.hdr', function(hdrmap) {
 
 });
 
-//ORBITS
 
-
+//Visualizing position of GEO and some other things
 const georing = new THREE.RingGeometry( 13.4, 13.5, 360, 1);
 const rmaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
 rmaterial.side = THREE.DoubleSide;
@@ -151,16 +147,18 @@ GEO.rotation.set(1.57,0,0)
 const spheresat = new THREE.SphereGeometry(0.01, 3, 2 );
 const moonsphere = new THREE.SphereGeometry(0.552, 16,16);
 
+//some calculations
 //Earth radius = 6400
-//distance multiplier =  0.00031796875
+//distance multiplier =  0.00031796875  
 //GEO = 11.38
+
 
 
 
 //JSON stuff:
 
 
-// creating loop 
+// creating loop THIS IS THE IMPORTANT BIT 
 fetch('data_normal.json')
   .then(response => response.json())
   .then(data => {
@@ -202,10 +200,12 @@ fetch('data_normal.json')
     animate(); 
   });
 
+  //END OF IMPORTANT BIT 
+
   const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.1 );
   scene.add( directionalLight );
 
-  //moon
+  //moon for scale
 
   const moon = new THREE.Mesh(moonsphere, new THREE.MeshBasicMaterial({color: 0xfffff}))
   moon.position.set(0,0,123.65804)
