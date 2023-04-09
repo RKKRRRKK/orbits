@@ -3,7 +3,7 @@ A simplified model of and a visualization of circular orbits of active satellite
 The code reads a JSON file of (simplified/modeled) orbital information through a loop, for each iteration of the loop I create a mesh at a specified height, give it the specified "speed", and create an object at 0,0,0 for it to rotate around, additionally each satellite is given a randomly generated initial y rotation "angle" so that
 they are spread out at the beginning of the animation.  
 
-Watning: this is my first time playing around with GIT, also my first project in JS, I used a boilerplate to get ThreeJS running.
+Warning: this is my first time playing around with GIT, also my first project in JS, I used a boilerplate to get ThreeJS running.
 I always get the ERR_OSSL_EVP_UNSUPPORTED error when trying to run it, running: $env:NODE_OPTIONS="--openssl-legacy-provider", fixes it.
 If anything is extremely dumb, or unclear, I apologize, I generally work with data in Python and SQL and never needed to collaborate on code. So I have no clue about
 best practices and the like. 
